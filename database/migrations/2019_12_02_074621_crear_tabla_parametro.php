@@ -22,7 +22,6 @@ class CrearTablaParametro extends Migration
             $table->string('fondo_conjunto',255)->default('imagen-principal.jpg');
             $table->string('logo_conjunto',255)->default('logo-principal.png');
             $table->string('slogan_conjunto',255)->default('Slogan Principal del Conjunto');
-            $table->longText('nosotros_conjunto')->nullable();
             $table->timestamps();
             $table->charset = 'utf8';
             $table->collation = 'utf8_spanish_ci';
