@@ -1,0 +1,22 @@
+.cuerpo {
+    width: 100%;
+    border-style: outset;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    margin-bottom: 50px;
+}
+
+.formularioContactoFront {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    width: 70%;
+    margin: auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: row;
+}

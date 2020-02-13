@@ -1,0 +1,42 @@
+.cuerpo {
+    width: 100%;
+    border-style: outset;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    margin-bottom: 50px;
+}
+
+.galeria {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.galeriapol {
+    margin: 0px auto 0;
+    width: 100%;
+}
+
+.foto-galeria {
+    -moz-transform: rotate(-15deg);
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+}
+
+.foto-galeria:hover {
+    height: 250%;
+    width: 120%;
+    z-index: 1000;
+    -webkit-transition: all 1.0s ease;
+    -moz-transition: all 1.0s ease;
+    -o-transition: all 1.0s ease;
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -ms-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    transform: scale(1.25);
+    cursor: pointer;
+}

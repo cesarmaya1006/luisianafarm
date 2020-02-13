@@ -1,0 +1,376 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Nanum+Pen+Script|Roboto");
+.cuerpo {
+    width: 100%;
+    margin: auto;
+    border-style: outset;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    margin-bottom: 50px;
+    background-image: url('../../imagenes/sistema/periodico.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.pantallaNoticias {
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.tituloPrincipalNoticias {
+    width: 100%;
+    text-align: center;
+}
+
+.tituloPrincipalNoticias h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.noticiasPrimero {
+    width: 100%;
+}
+
+.cajonNoticiaPrimero {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    text-align: center;
+}
+
+.noticiasSegundo {
+    width: 100%;
+}
+
+.noticiaCorta {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.imagenNoticiaCorta {
+    width: 80%;
+    margin: auto;
+}
+
+.tituloNoticiaCorta {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.tituloNoticiaCorta h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.parrafoNoticiaCorta {
+    width: 90%;
+    margin: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.galeriaNoticia {
+    display: flex;
+    justify-content: center;
+}
+
+.vintalight {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-left: 5%;
+    max-width: 1200px;
+    padding: 50px 0;
+}
+
+.vintalight__container {
+    position: relative;
+    width: 90%;
+    max-width: 8.5em;
+    background-color: #fff;
+    font-size: 30px;
+    box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s cubic-bezier(0.075, 0.82, 0.165, 1), box-shadow 0.5s, margin 0.5s;
+}
+
+@media screen and (max-width: 500px) {
+    .vintalight__container {
+        max-width: 5.35em;
+    }
+}
+
+.vintalight__container:hover {
+    box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+@media screen and (max-width: 700px) {
+    .vintalight__container:hover {
+        margin: 0 25px;
+    }
+}
+
+.vintalight__container:hover .vintalight__photo::before {
+    transform: scale(1);
+}
+
+.vintalight__container.active,
+.vintalight__container.active:hover {
+    transform: rotate(0) scale(1.25);
+}
+
+@media screen and (max-width: 500px) {
+    .vintalight__container.active,
+    .vintalight__container.active:hover {
+        transform: rotate(0) scale(1.15);
+    }
+}
+
+.vintalight__container.active {
+    position: relative;
+}
+
+.vintalight__container.active .vintalight__photo {
+    cursor: default;
+}
+
+.vintalight__container.active .vintalight__photo::before {
+    display: none;
+}
+
+.vintalight__photo {
+    position: relative;
+    width: 5.25em;
+    height: auto;
+    margin: 0.625em auto 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .vintalight__photo {
+        width: 3.475em;
+        height: 3.475em;
+        margin: 0.4375em auto 0;
+    }
+}
+
+.vintalight__photo::before {
+    content: "Ver foto";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 1em;
+    font-family: "Roboto", sans-serif;
+    transform: scale(0);
+    transition: all 0.25s;
+}
+
+.vintalight__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vintalight__caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.375em;
+}
+
+@media screen and (max-width: 500px) {
+    .vintalight__caption {
+        height: 1.6625em;
+    }
+}
+
+.vintalight__text {
+    color: #222;
+    font-size: 1em;
+    font-family: "Nanum Pen Script", cursive;
+}
+
+.vintalight-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    z-index: 10000;
+    transition: opacity 0.5s;
+}
+
+.vintalight-overlay.active {
+    opacity: 1;
+}
+
+.vintalight__button {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: #f53d3d;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    cursor: pointer;
+}
+
+.vintalight__container:hover {
+    box-shadow: 0 4px 8px 3px rgba(0, 0, 0, 0.4);
+    z-index: 100;
+}
+
+@media screen and (max-width: 700px) {
+    .vintalight__container:hover {
+        margin: 0 25px;
+    }
+}
+
+.vintalight__container:hover .vintalight__photo::before {
+    transform: scale(1);
+}
+
+.vintalight__container.active,
+.vintalight__container.active:hover {
+    transform: rotate(0) scale(1.25);
+}
+
+@media screen and (max-width: 500px) {
+    .vintalight__container.active,
+    .vintalight__container.active:hover {
+        transform: rotate(0) scale(1.15);
+    }
+}
+
+.vintalight__container.active {
+    position: relative;
+}
+
+.vintalight__container.active .vintalight__photo {
+    cursor: default;
+}
+
+.vintalight__container.active .vintalight__photo::before {
+    display: none;
+}
+
+.vintalight__photo {
+    position: relative;
+    width: 7.25em;
+    height: 7.25em;
+    margin: 0.625em auto 0;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+    .vintalight__photo {
+        width: 4.475em;
+        height: 4.475em;
+        margin: 0.4375em auto 0;
+    }
+}
+
+.vintalight__photo::before {
+    content: "Ver foto";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 1em;
+    font-family: "Roboto", sans-serif;
+    transform: scale(0);
+    transition: all 0.25s;
+}
+
+.vintalight__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.vintalight__caption {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 2.375em;
+}
+
+@media screen and (max-width: 500px) {
+    .vintalight__caption {
+        height: 1.6625em;
+    }
+}
+
+.vintalight__text {
+    color: #222;
+    font-size: 1em;
+    font-family: "Nanum Pen Script", cursive;
+}
+
+.vintalight-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    z-index: 10000;
+    transition: opacity 0.5s;
+}
+
+.vintalight-overlay.active {
+    opacity: 1;
+}
+
+.vintalight__button {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 30px;
+    height: 30px;
+    background-color: #f53d3d;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    outline: none;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: -2px 2px 1px rgba(0, 0, 0, 0.3);
+    z-index: 10000;
+    cursor: pointer;
+}

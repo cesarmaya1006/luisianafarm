@@ -1,0 +1,61 @@
+.cuerpo {
+    width: 100%;
+    height: 95vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.pantallaPrincipal {
+    width: 100%;
+    height: 95vh;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenido-principal {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logoPrincipal {
+    width: 35%;
+    margin: auto;
+    animation-name: animLogo;
+    animation-duration: 1.5s;
+}
+
+.sloganPrincipal {
+    width: 100%;
+    text-align: center;
+}
+
+.menuPrincipal {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 1.2em;
+    color: black;
+}
+
+.menuPrincipal a {
+    color: black;
+    font-size: 0.8em;
+}
+
+.menuPrincipal a:hover {
+    color: mediumblue;
+}
+
+@keyframes animLogo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

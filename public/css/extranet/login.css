@@ -1,0 +1,155 @@
+.cuerpo {
+    width: 99vw;
+    min-height: 80vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.pantalla {
+    width: 50%;
+    min-height: 80vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    animation-name: animLogo;
+    animation-duration: 3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cajonLogin {
+    width: 75%;
+    min-height: 50vh;
+    background-color: rgba(63, 150, 200, 0.6);
+    border-style: ridge;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 7px;
+}
+
+.row {
+    width: 100%;
+}
+
+@keyframes animLogo {
+    0% {
+        opacity: 0;
+        width: 0%;
+        right: 100%;
+    }
+    50% {
+        opacity: 0;
+        width: 0%;
+        right: 100%;
+    }
+    100% {
+        opacity: 1;
+        width: 50%;
+        right: 0%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .pantalla {
+        width: 50%;
+        min-height: 80vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        animation-name: animLogo;
+        animation-duration: 3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cajonLogin {
+        width: 75%;
+        min-height: 50vh;
+        background-color: rgba(63, 150, 200, 0.6);
+        border-style: ridge;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 7px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .pantalla {
+        width: 100%;
+        margin: auto;
+        min-height: 80vh;
+        background-color: rgba(0, 0, 0, 0.5);
+        animation-name: animLogo;
+        animation-duration: 3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .cajonLogin {
+        width: 100%;
+        margin: auto;
+        min-height: 50vh;
+        background-color: rgba(63, 150, 200, 0.6);
+        border-style: ridge;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 7px;
+    }
+    @keyframes animLogo {
+        0% {
+            opacity: 0;
+            width: 0%;
+            right: 100%;
+        }
+        50% {
+            opacity: 0;
+            width: 0%;
+            right: 100%;
+        }
+        100% {
+            opacity: 1;
+            width: 100%;
+            right: 0%;
+        }
+    }
+}
+
+.logoAplicacion {
+    width: 50%;
+    margin: auto;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5%;
+    margin-bottom: 30px;
+}
+
+.logoAplicacion img {
+    width: 80%;
+    height: auto;
+}
+
+.tituloFormulario {
+    width: 100%;
+    color: white;
+    font-size: 2em;
+    text-shadow: 2px, 2px, black;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.formularioLogin {
+    width: 100%;
+}
+
+.cajonInput {
+    width: 100%;
+}

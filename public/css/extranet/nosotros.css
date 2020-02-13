@@ -1,0 +1,39 @@
+.cuerpo {
+    width: 100%;
+    border-style: outset;
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+    margin-bottom: 50px;
+}
+
+.contenidoNosotros {
+    width: 100%;
+}
+
+.tituloNosotros {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tituloNosotros h4 {
+    width: 100%;
+    text-align: center;
+}
+
+.parrafoNosotros {
+    width: 100%;
+}
+
+#imgNosotros1 {
+    width: 30%;
+    max-width: 350px;
+    min-width: 200px;
+    margin: 15px;
+}
+
+#imgNosotros2 {
+    width: 30%;
+    max-width: 350px;
+    min-width: 200px;
+    margin: 15px;
+}
